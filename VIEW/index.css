@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: skyblue;
+    background-attachment: fixed;
+    font-family: 'poppins',sans-serif;
+}
+a{
+    text-decoration: none;
+    
+    margin-left:130px ;
+    font-size: 15px;
+    color: whitesmoke;
+    
+}
+nav{
+    float: right;
+   
+   
+    padding: 32px;
+   
+  
+}
+.f{
+    background-color: green;
+    width: 1240px;
+    padding: 23px;
+    margin-top: -69px;
+    margin-right:-30px;
+}
+.container{
+    text-align: center;
+    margin-top:182px ;
+}
+.down{
+    margin-top: 133px;
+    margin-right: -37px;
+}
