@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body style="background-color: skyblue;">
-<a href="insert.php" class="btn btn-primary">Add New</a>
+<a href="insert.php" class="btn btn-primary text-right">Add New</a>
     <table border="1" class="table table-bordered table-stripped table-hover container">
 
     <tr>

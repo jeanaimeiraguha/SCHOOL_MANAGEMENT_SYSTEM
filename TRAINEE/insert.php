@@ -22,6 +22,7 @@ exit;
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="css/bootstrap.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -31,7 +32,7 @@ exit;
     Trainee_id:<input type="text" name="Trainee_id" class="form-control" placeholder="Enter Trainee Id"><br>
     Trainer_id:<input type="text" name="Trainer_id" class="form-control" placeholder="Enter Trainer Id"><br>
     Trainee_name:<input type="text" name="Trainee_name" class="form-control" placeholder="Enter Trainee name"><br>
-    Trainee_Adress:<input type="text" name="Trainee_adress" class="form-control" placeholder="Enter Trainee Address"><br>
+    Trainee_Adress:<input type="text" name="Trainee_address" class="form-control" placeholder="Enter Trainee Address"><br>
     <button name="submit" class="btn btn-primary">Add New</button>
 </form>
 </body>

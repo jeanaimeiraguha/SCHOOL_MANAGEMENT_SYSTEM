@@ -39,7 +39,7 @@ if (isset($_POST['submit'])) {
     $update=mysqli_query($conn, "UPDATE Modules SET   Module_code='$Module_code',Module_name='$Module_name', Trade_id='$Trade_id' WHERE Module_code='$Module_code'");
 if ($update) {
     # code...
-    header('location:select3.php');
+    header('location:select.php');
 }
 exit;
 

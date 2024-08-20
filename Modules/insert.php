@@ -28,9 +28,9 @@ exit;
 </head>
 <body style="background-color: skyblue;">
     <form action="" method="post" class="form was-validated p-5 lg-6 bg-dark my-5">
-   Module_code:<input type="text" name="Module_code" class="form-control"><br>
-       Module_name:<input type="text" name="Module_name" class="form-control"><br>
-        Trade id:<input type="text" name="Trade_id" class="form-control"><br>
+   Module_code:<input type="text" name="Module_code" class="form-control" placeholder="Enter Module code"><br>
+       Module_name:<input type="text" name="Module_name" class="form-control" placeholder="Enter Module Name"><br>
+        Trade id:<input type="text" name="Trade_id" class="form-control" placeholder="Enter Trade_id"><br>
     <button name="submit" class="btn btn-primary">Add New</button>
 </form>
 </body>
