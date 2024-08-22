@@ -6,12 +6,13 @@
     <title>Document</title>
 </head>
 <body>
-    <table>
+    <table border="1">
         <tr>
             <th>Trainee_id</th>
             <th>Trainer_id</th>
             <th>Trainee_name</th>
             <th>Trainee_address</th>
+            <th colspan="2">Operations</th>
         </tr>
         <?php
         include("conn.php");
