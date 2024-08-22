@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="insert.php">Add New</a>
     <table border="1">
         <tr>
             <th>Trainee_id</th>
@@ -16,8 +17,8 @@
         </tr>
         <?php
         include("conn.php");
-        $select =mysqli_query($conn, "SELECT * FROM trainee");
-        while ($row=mysqli_fetch_array($select)) {
+        $Select = mysqli_query($conn, "SELECT * FROM trainee");
+        while($row=mysqli_fetch_array($Select)) {
             # code...
         
         
@@ -29,11 +30,14 @@
             <td <?php echo $row['Trainee_address']?>>Trainee_address</td>
             <td><a href="delete.php?dlt=<?php echo $row['Trainee_id']?>">Delete</a></td>
             <td><a href="update.php?upd=<?php echo $row['Trainee_id']?>">Update</a></td>
-            
+        
         </tr>
         <?php
         }
         ?>
+          
+      
     </table>
+  
 </body>
 </html>

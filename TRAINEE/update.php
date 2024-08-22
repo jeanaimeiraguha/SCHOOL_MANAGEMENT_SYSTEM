@@ -17,10 +17,10 @@
 
 <form action="" method="post">
 
- Trainee Id<input type="text" name="Trainee_id" value="<?php echo $row['Trainee_id']?>">
-Trainer_id<input type="text" name="Trainer_id" value="<?php echo $Trainer_id['Trainer_id']?>">
-Trainee_name<input type="text" name="Trainee_name)" value="<?php echo $row['Trainee_name']?>">
-Trainee_address<input type="text" name="Trainee_address" value="<?php echo $row['Trainee_address']?>">
+ Trainee Id<input type="text" name="Trainee_id" value="<?php echo $row['Trainee_id']?>"> <br>
+Trainer_id<input type="text" name="Trainer_id" value="<?php echo $Trainer_id['Trainer_id']?>"><br>
+Trainee_name<input type="text" name="Trainee_name)" value="<?php echo $row['Trainee_name']?>"> <br>
+Trainee_address<input type="text" name="Trainee_address" value="<?php echo $row['Trainee_address']?>"><br>
 <button name="submit">Update</button>
 </form>
 
@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
     $Trainer_id=$_POST['Trainer_d'];
     $Trainee_name=$_POST['Trainee_name'];
     $Trainee_address=$_POST['Trainee_address'];
-    $update= mysqli_query($conn, "UPDATE Trainee SET Trainee_id='$Trainee_id', Trainer_id='$Trainer_id', Trainee_name='$Trainee_name', Trainee_address='$Trainee_address'");
+    $update= mysqli_query($conn, "UPDATE Trainee SET Trainee_id='$Trainee_id', Trainer_id='$Trainer_id', Trainee_name='$Trainee_name', Trainee_address='$Trainee_address' WHERE  Trainee_id='$Trainee_id' ");
     if ($update) {
         # code...
         header('location:select.php');
