@@ -31,15 +31,11 @@ Trainee_name <input type="text" name="Trainee_name"  value="<?php echo $row['Tra
 <?php
 include('conn.php');
 if (isset($_POST['submit'])) {
-
-    # code...
-    
-
     $Trainee_id=$_POST['Trainee_id'];
     $Trainer_id=$_POST['Trainer_id'];
     $Trainee_name=$_POST['Trainee_name'];
     $Trainee_address=$_POST['Trainee_address'];
-    $update=mysqli_query($conn, "UPDATE Trainee SET   Trainee_id='$Trainee_id',Trainer_id='$Trainer_id',Traineee_name='$Trainee_name' ,Trainee_address='$Trainee_address' WHERE Trainee_id='$Trainee_id'");
+    $update=mysqli_query($conn, "UPDATE Trainee SET Trainee_id='$Trainee_id',Trainer_id='$Trainer_id',Traineee_name='$Trainee_name' ,Trainee_address='$Trainee_address' WHERE Trainee_id='$Trainee_id'");
 if ($update) {
     # code...
     header('location:select.php');

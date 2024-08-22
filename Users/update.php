@@ -33,8 +33,8 @@ if (isset($_POST['submit'])) {
     
 
     $User_name=$_POST['User_name'];
-    $user_password=$_POST['User_password'];
-    $update=mysqli_query($conn, "UPDATE users SET   User_name='$User_name',user_password='$User_password' WHERE User_id='$User_id'");
+    $User_password=$_POST['User_password'];
+    $update=mysqli_query($conn, "UPDATE users SET   User_name='$User_name',User_password='$User_password' WHERE User_id='$User_id'");
 if ($update) {
     # code...
     header('location:select.php');

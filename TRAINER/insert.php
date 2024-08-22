@@ -11,13 +11,13 @@ if (isset($_POST['submit'])) {
     $Trainer_id = $_POST['Trainer_id'];
     $User_id = $_POST['User_id'];
     $Trade_id = $_POST['Trade_id'];
-    $Trainer_name = $_POST['Trainer_name'];
     $Trainer_age = $_POST['Trainer_age'];
+    $Trainer_name = $_POST['Trainer_name'];
     $Phone_number = $_POST['Phone_number'];
 
    
     
-    $insert = mysqli_query($conn, "INSERT INTO Trainer VALUES('$Trainer_id', '$User_id', '$Trade_id', '$Trainer_name', '$Trainer_age', '$Phone_number')");
+    $insert = mysqli_query($conn, "INSERT INTO Trainer VALUES('$Trainer_id', '$User_id', '$Trade_id','$Trainer_age', '$Trainer_name', '$Phone_number')");
     
     if ($insert) {
         header('location:select.php');
