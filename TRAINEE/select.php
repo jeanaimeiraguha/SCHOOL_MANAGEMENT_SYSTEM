@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body style="background-color: skyblue;">
+    <h2 class="card card-header text-center">Trainee Lists</h2>
     <a href="insert.php" class="btn btn-primary my-5">Add New</a>
     <table border="1" class="table table-bordered table-striped table-hover container">
 

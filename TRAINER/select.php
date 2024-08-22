@@ -14,7 +14,7 @@
         <a href="insert.php" class="btn btn-primary">Add New Trainer</a>
     </div>
     
-    <table class="table table-bordered table-striped table-hover">
+    <table border="1" class="table table-bordered table-striped table-hover">
         <thead class="thead-dark">
             <tr>
                 <th>Trainer ID</th>

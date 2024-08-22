@@ -28,6 +28,7 @@ exit;
     <title>Document</title>
 </head>
 <body style="background-color: skyblue;">
+    <h2 class="card card-header text-center">Insert New Trainee</h2>
     <form action="" method="post" class="form was-validated bg-dark p-5 lg-6 container my-5" >
     Trainee_id:<input type="text" name="Trainee_id" class="form-control" placeholder="Enter Trainee Id"><br>
     Trainer_id:<input type="text" name="Trainer_id" class="form-control" placeholder="Enter Trainer Id"><br>
