@@ -10,8 +10,7 @@
     <h2 class="card card-header text-center">Trainee Lists</h2>
     <a href="insert.php" class="btn btn-primary my-5">Add New</a>
     <table border="1" class="table table-bordered table-striped table-hover container">
-
-    <tr>
+<tr>
         <th>Trainee_id</th>
         <th>Trainer_id</th>
         <th>Trainee_name</th>
@@ -30,8 +29,8 @@
         <td><?php echo $row['Trainee_name']?></td>
         <td><?php echo $row['Trainee_address']?></td>
 
-        <td><a href="delete.php?dlt=<?php echo $row['Trainee_id']?>" class="btn btn-danger">Delete</a></td>
-        <td><a href="update.php?updt=<?php echo $row['Trainee_id']?>" class="btn btn-success">Update</a></td>
+        <td><a href="delete.php?dlt=<?php echo $row['Trainee_id'];?>" class="btn btn-danger">Delete</a></td>
+        <td><a href="update.php?Trainee_id=<?php echo $row['Trainee_id'];?>" class="btn btn-success">Update</a></td>
     </tr>
     <?php
     

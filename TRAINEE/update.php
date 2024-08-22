@@ -8,10 +8,9 @@
 </head>
 <body style="background-color: skyblue;">
     <?php
-    
     include("conn.php");
-    $Trainee_id=$_GET['updt'];
-    $select=mysqli_query($conn , "SELECT * FROM Trainee WHERE Trainee_id='$Trainee_id'");
+    $Trainee_id=$_GET['Trainee_id'];
+    $select=mysqli_query($conn ,"SELECT * FROM Trainee WHERE '$Trainee_id=Trainee_id'");
     $row=mysqli_fetch_array($select);
 
     
@@ -19,10 +18,10 @@
       <form action="" method="post" class="form was-validated p-5 lg-6 bg-dark container my-5">
       
 
-Trainee_id <input type="text" name="Trainee_id" value="<?php echo $row['Trainee_id']?>" class="form-control" placeholder="Enter Trainee id"> <br>
-Trainer_id <input type="text" name="Trainer_id"  value="<?php echo $row['Trainer_id']?>" class="form-control" placeholder="Enter Trainer id"> <br>
-Trainee_address <input type="text" name="Trainee_address"  value="<?php echo $row['Trainee_address']?>" class="form-control" placeholder="Enter Trainee address"> <br>
-Trainee_name <input type="text" name="Trainee_name"  value="<?php echo $row['Trainee_name']?>" class="form-control" placeholder="Enter Trainee Name"> <br>
+Trainee_id <input type="text" name="Trainee_id" value="<?php echo $row['Trainee_id']?>"  class="form-control" placeholder="Enter Trainee id"> <br>
+Trainer_id <input type="text" name="Trainer_id" value="<?php echo $row['Trainer_id']?>" class="form-control" placeholder="Enter Trainer id"> <br>
+Trainee_address <input type="text" name="Trainee_address" value="<?php echo $row['Trainee_address']?>" class="form-control" placeholder="Enter Trainee address"> <br>
+Trainee_name <input type="text" name="Trainee_name" value="<?php echo $row['Trainee_name']?>" class="form-control" placeholder="Enter Trainee Name"> <br>
 
 <button name="submit" class="btn btn-success">Update</button>
 </form>
@@ -35,7 +34,12 @@ if (isset($_POST['submit'])) {
     $Trainer_id=$_POST['Trainer_id'];
     $Trainee_name=$_POST['Trainee_name'];
     $Trainee_address=$_POST['Trainee_address'];
-    $update=mysqli_query($conn, "UPDATE Trainee SET Trainee_id='$Trainee_id',Trainer_id='$Trainer_id',Traineee_name='$Trainee_name' ,Trainee_address='$Trainee_address' WHERE Trainee_id='$Trainee_id'");
+    $update=mysqli_query($conn, "UPDATE Trainee SET 
+    Trainee_id='$Trainee_id',
+     Trainer_id='$Trainer_id' , 
+     Traineee_name='$Trainee_name' ,
+     Trainee_address='$Trainee_address'
+      WHERE Trainee_id='$Trainee_id'");
 if ($update) {
     # code...
     header('location:select.php');
@@ -47,3 +51,4 @@ exit;
 ?>
 // working normally
 //made by iraguha
+
