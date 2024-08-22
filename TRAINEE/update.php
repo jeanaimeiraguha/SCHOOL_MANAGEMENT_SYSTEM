@@ -1,26 +1,21 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body style="background-color: skyblue;">
-    <?php
+<?php
     include("conn.php");
-    $Trainee_id=$_GET['Trainee_id'];
-    $select=mysqli_query($conn ,"SELECT * FROM Trainee WHERE '$Trainee_id=Trainee_id'");
-    $row=mysqli_fetch_array($select);
 
-    
+    // Check if 'upd' is set in the URL
+    if(isset($_GET['upd'])){
+        $Trainee_id = $_GET['upd'];
+
+        // Fetch the specific trainee data
+        $select = mysqli_query($conn, "SELECT * FROM Trainee WHERE Trainee_id='$Trainee_id'");
+
+        // Check if a record was found
+      $row=mysqli_fetch_array($select);}
     ?>
-      <form action="" method="post" class="form was-validated p-5 lg-6 bg-dark container my-5">
-      
 
-Trainee_id <input type="text" name="Trainee_id" value="<?php echo $row['Trainee_id']?>"  class="form-control" placeholder="Enter Trainee id"> <br>
-Trainer_id <input type="text" name="Trainer_id" value="<?php echo $row['Trainer_id']?>" class="form-control" placeholder="Enter Trainer id"> <br>
-Trainee_address <input type="text" name="Trainee_address" value="<?php echo $row['Trainee_address']?>" class="form-control" placeholder="Enter Trainee address"> <br>
+    <form action="" method="post" class="form was-validated p-5 lg-6 bg-dark container my-5">
+        Trainee_id <input type="text" name="Trainee_id" value="<?php echo $row['Trainee_id'] ?>" class="form-control" placeholder="Enter Trainee ID"> <br>
+        Trainer_id <input type="text" name="Trainer_id" value="<?php echo $row['Trainer_id'] ?>" class="form-control" placeholder="Enter Trainer ID"> <br>
+        Trainee_address <input type="text" name="Trainee_address" value="<?php echo $row['Trainee_address']; ?>" class="form-control" placeholder="Enter Trainee Address"> <br>
 Trainee_name <input type="text" name="Trainee_name" value="<?php echo $row['Trainee_name']?>" class="form-control" placeholder="Enter Trainee Name"> <br>
 
 <button name="submit" class="btn btn-success">Update</button>

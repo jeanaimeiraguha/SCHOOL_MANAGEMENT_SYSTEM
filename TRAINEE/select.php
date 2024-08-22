@@ -30,7 +30,7 @@
         <td><?php echo $row['Trainee_address']?></td>
 
         <td><a href="delete.php?dlt=<?php echo $row['Trainee_id'];?>" class="btn btn-danger">Delete</a></td>
-        <td><a href="update.php?Trainee_id=<?php echo $row['Trainee_id'];?>" class="btn btn-success">Update</a></td>
+        <td><a href="update.php?upd=<?php echo $row['Trainee_id'];?>" class="btn btn-success">Update</a></td>
     </tr>
     <?php
     
