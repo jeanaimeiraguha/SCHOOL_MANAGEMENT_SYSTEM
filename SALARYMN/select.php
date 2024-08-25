@@ -6,6 +6,7 @@
     <title>Document</title>
 </head>
 <body>
+    <a href="insert.php">Add New</a>
     <table border="1">
         <tr>
             <th>Trainee ID</th>

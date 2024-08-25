@@ -31,6 +31,9 @@
                     <a class="nav-link" href="../ASSESSMENT/select.php">Assessment</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="../SALARYMN/select.php">Salary</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="#">Logout</a>
                 </li>
             </ul>
