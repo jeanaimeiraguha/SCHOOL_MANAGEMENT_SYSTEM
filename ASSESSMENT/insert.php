@@ -2,9 +2,6 @@
 
 include('conn.php');
 if (isset($_POST['submit'])) {
-    # code...
-   
-
     $Trainer_id=$_POST['Trainer_id'];
     $module_id=$_POST['module_id'];
     $Trade_id=$_POST['Trade_id'];
@@ -32,8 +29,7 @@ exit;
 <body style="background-color: skyblue;">
     <form action="" method="post" class="form was-validatd p-5 lg-6 bg-dark container my-5 ">
     
-        Trainer Id:<input type="text" name="
-        Trainer Id" class="form-control" placeholder="Trainer Id"><br>
+        Trainer Id:<input type="text" name="TrainerId" class="form-control" placeholder="Trainer Id"><br>
         Module Id:<input type="number" name="Module_id" class="form-control" placeholder="Enter Module id"><br>
      Trade Id:<input type="number" name="Trade_id" class="form-control" placeholder="Enter Trade id"><br>
    Assessment Date:<input type="date" name="Assessment_date" class="form-control" placeholder="Enter Assessment  Date"><br>
