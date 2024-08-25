@@ -27,8 +27,9 @@
             <td><?php echo $row['Trainee_phone']?></td>
             <td><?php echo $row['Trainee_salary']?></td>
             
-            <td><a href="">Update</a></td>
-            <td><a href="">Delete</a></td>
+            
+            <td><a href="delete.php?Trainee_id=<?php echo $row['Trainee_id']?>">Delete</a></td>
+            <td><a href="update.php?Trainee_id=<?php echo $row['Trainee_id']?>">Update</a></td>
         </tr>
         <?php
         }
