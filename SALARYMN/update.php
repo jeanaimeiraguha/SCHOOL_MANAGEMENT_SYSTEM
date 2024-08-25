@@ -21,7 +21,27 @@ include('conn.php');
 
 include('conn.php');
 
+if (isset($_POST['submit'])) {
+    # code...
+    $Trainee_name= $_POST['Trainee_name'];
+    $Trainee_phone = $_POST['Trainee_phone'];
+    $Trainee_salary= $_POST['Trainee_salary'];
+
+    $update= mysqli_query($conn, "UPDATE salary SET Trainee_name='$Trainee_name', Trainee_phone='$Trainee_phone', Trainee_salary='$Trainee_salary' WHERE Trainee_id='$Trainee_id'");
+    if ($update) {
+        # code...
+        header('location:select.php');
+    }
+    exit;
+}
+
 ?>
+<form action="" method="post">
+
+Trainee Name<input type="text" name="" value="">
+Trainee Phone<input type="text" name="" value="">
+Trainee Salary<input type="text" name="" value="">
+</form>
    
 
 </body>
