@@ -17,8 +17,17 @@
         
         include('conn.php');
         $select=mysqli_query($conn, "SELECT * FROM salary");
-        
+        while($row=mysqli_fetch_array($select)){
 
+        ?>
+        <tr>
+            <td><?php echo $row['Trainee_id']?></td>
+            <td><?php echo $row['Trainee_name']?></td>
+            <td><?php echo $row['Trainee_phone']?></td>
+            <td><?php echo $row['Trainee_salary']?></td>
+        </tr>
+        <?php
+        }
         ?>
 
     </table>
