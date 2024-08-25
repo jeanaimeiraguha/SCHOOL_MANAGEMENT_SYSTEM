@@ -38,9 +38,9 @@ if (isset($_POST['submit'])) {
 ?>
 <form action="" method="post">
 
-Trainee Name<input type="text" name="" value="">
-Trainee Phone<input type="text" name="" value="">
-Trainee Salary<input type="text" name="" value="">
+Trainee Name<input type="text" name="Trainee_name" value="<?php echo $row['Trainee_name']?>">
+Trainee Phone<input type="text" name="Trainee_phone" value="<?php echo $row['Trainee_phone']?>">
+Trainee Salary<input type="text" name="Trainee_salary" value="<?php echo $row['Trainee_salary']?>">
 </form>
    
 
