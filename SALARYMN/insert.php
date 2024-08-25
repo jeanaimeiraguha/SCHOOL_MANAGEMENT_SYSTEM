@@ -5,7 +5,7 @@ include('conn.php');
 
 if (isset($_POST['submit'])) {
     # code...
-    $Trainee_name= $_POST['trainee_name'];
+    $Trainee_name= $_POST['Trainee_name'];
 	$Trainee_phone= $_POST['Trainee_phone'];
     $Trainee_Salary= $_POST['Trainee_salary'];
 
@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
         # code...
         header('location:select.php');
     }
-    exit;
+
 
 }
 
@@ -32,9 +32,9 @@ if (isset($_POST['submit'])) {
 </head>
 <body>
    <form action="" method="post">
-Trainee_name<input type="text" name="Trainee_name">
-Trainee_phone<input type="text" name="Trainee_phone">
-  Trainee_salary<input type="text" name="Trainee_salary"> 
+Trainee_name<input type="text" name="Trainee_name"> <br>
+Trainee_phone<input type="text" name="Trainee_phone"> <br>
+  Trainee_salary<input type="text" name="Trainee_salary"> <br>
   <button name="submit">Add New</button>
 </form> 
 </body>
