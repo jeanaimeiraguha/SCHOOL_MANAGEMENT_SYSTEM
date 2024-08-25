@@ -1,4 +1,5 @@
 <?php
+include('conn.php');
     $Trainee_id =$_GET['Trainee_id'];
     $select = mysqli_query($conn , "SELECT * FROM salary where Trainee_id='$Trainee_id'");
     $row= mysqli_fetch_array($select);
