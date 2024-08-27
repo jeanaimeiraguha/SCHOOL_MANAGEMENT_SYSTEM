@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $Trade_id=$_POST['Trade_id'];
     $Asessment_date=$_POST['Asessment_date'];
     $assessment_name=$_POST[' assessment_name'];
-$insert=mysqli_query($conn, "INSERT INTO   assessment VALUES('$Traner_id','$module_id','$Trade_id','$Asessment_date',  '$assessment_name')");
+    $insert=mysqli_query($conn, "INSERT INTO   assessment VALUES('$Traner_id','$module_id','$Trade_id','$Asessment_date',  '$assessment_name')");
 if ($insert) {
     # code...
     
