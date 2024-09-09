@@ -47,7 +47,7 @@ Welcome to the School Management System (SMS). This system is designed to stream
 
 
    
-### This DFD LEVEL 0
+### This iz DFD LEVEL 0
 
 
                 +----------------------+
