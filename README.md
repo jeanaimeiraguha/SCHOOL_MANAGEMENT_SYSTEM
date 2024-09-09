@@ -63,7 +63,25 @@ Welcome to the School Management System (SMS). This system is designed to stream
     |  Admin  |        | Trainees |           | Trainers |
     +--------+        +--------+           +--------+
 
+
+
+
+
+
+
+
+
 ## This is DFD LEVEL 1
+
+
+
+
+
+
+
+
+
+
 
                         +--------------------------+
                         |                          |
@@ -87,28 +105,47 @@ Welcome to the School Management System (SMS). This system is designed to stream
                                     |
                                     |
                                     v
+
+
+                                    
                             +-------+--------+
                             |   Module Mgmt  |
                             |    Process     |
                             +-------+--------+
                                     |
                                     v
+
+
+                                    
                             +-------+--------+
                             |  Module Database|
                             +-----------------+
                                     |
                                     v
+
+
+
+                                    
                             +-------+--------+
                             | Assessment Mgmt|
                             |    Process     |
                             +-------+--------+
                                     |
                                     v
+
+
+
+
+                                    
                             +-------+--------+
                             |Assessment Database|
                             +------------------+
                                     |
                                     v
+
+
+
+                                    
                             +-------+--------+
                             | Salary Mgmt    |
                             |   Process      |
