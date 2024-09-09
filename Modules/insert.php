@@ -1,57 +1,87 @@
 <?php
-
 include('conn.php');
+
 if (isset($_POST['submit'])) {
-    # code...
-   
+    $Module_code = $_POST['Module_code'];
+    $Module_name = $_POST['Module_name'];
+    $Trade_id = $_POST['Trade_id'];
 
-    $Module_code=$_POST['Module_code'];
-    $Module_name=$_POST['Module_name'];
-    $Trade_id=$_POST['Trade_id'];
-$insert=mysqli_query($conn, "INSERT INTO Modules VALUES('$Module_code','$Module_name',' $Trade_id')");
-if ($insert) {
-    # code...
-    header('location:select.php');
+    $insert = mysqli_query($conn, "INSERT INTO Modules (Module_code, Module_name, Trade_id) VALUES('$Module_code', '$Module_name', '$Trade_id')");
+
+    if ($insert) {
+        header('location:select.php');
+        exit;
+    }
 }
-exit;
-}
-
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <style>
-        body {
-            background-color: #87CEEB; /* Sky blue color */
-        }
-        h1 {
-            text-align: center;
-            margin-top: 20px;
-            color: #333;
-        }
-        .container {
-            margin-top: 30px;
-        }
-        form{
-            border: none;
-            max-width: 150px;
-            box-shadow: 2px 2px 5px white;
-        }
-    </style>
-    </style>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Insert Module</title>
+    <style>
+        body {
+            background-color: #f0f8ff; /* Alice blue color */
+        }
+
+        .container {
+            max-width: 500px;
+            margin-top: 30px;
+        }
+
+        .card-header {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+        }
+
+        .btn-primary {
+            background-color: #007BFF;
+            border-color: #007BFF;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004080;
+        }
+
+        .form {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+        }
+    </style>
 </head>
-<h1 class="card card-header">Insert Module</h1>
-<body style="background-color: skyblue;">
-    <form action="" method="post" class="form container p-3">
-   Module_code:<input type="text" name="Module_code" class="form-control mb-3" placeholder="Enter Module code" >
-       Module_name:<input type="text" name="Module_name" class="form-control mb-3" placeholder="Enter Module Name">
-        Trade id:<input type="text" name="Trade_id" class="form-control mb-3" placeholder="Enter Trade_id">
-    <button name="submit" class="btn btn-primary">Add New</button>
-</form>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="card-header">Insert Module</h1>
+            <form action="" method="post" class="form">
+                <div class="form-group">
+                    <label for="Module_code">Module Code:</label>
+                    <input type="text" name="Module_code" id="Module_code" class="form-control mb-3" placeholder="Enter Module Code" required>
+                </div>
+                <div class="form-group">
+                    <label for="Module_name">Module Name:</label>
+                    <input type="text" name="Module_name" id="Module_name" class="form-control mb-3" placeholder="Enter Module Name" required>
+                </div>
+                <div class="form-group">
+                    <label for="Trade_id">Trade ID:</label>
+                    <input type="text" name="Trade_id" id="Trade_id" class="form-control mb-3" placeholder="Enter Trade ID" required>
+                </div>
+                <button name="submit" class="btn btn-primary btn-block">Add New</button>
+            </form>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
