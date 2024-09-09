@@ -1,44 +1,73 @@
-
-<html lang="en">
-<head>
-    <link rel="stylesheet" href="css/bootstrap.css">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<?php
-include('conn.php');
-if (isset($_POST['submit'])) {
-    $Trainer_id = $_POST['Trainer_id'];
-    $User_id = $_POST['User_id'];
-    $Trade_id = $_POST['Trade_id'];
-    $Trainer_age = $_POST['Trainer_age'];
-    $Trainer_name = $_POST['Trainer_name'];
-    $Phone_number = $_POST['Phone_number'];
-
-   
-    
-    $insert = mysqli_query($conn, "INSERT INTO Trainer VALUES('$Trainer_id', '$User_id', '$Trade_id','$Trainer_age', '$Trainer_name', '$Phone_number')");
-    
-    if ($insert) {
-        header('location:select.php');
-    } else {
-        echo "Not inserted";
-    }
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Trainer</title>
+    <style>
+        body {
+            background-color: #e9f7f9; /* Light cyan background */
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+
+        .card {
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-body {
+            padding: 2rem;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn-primary {
+            background-color: #007BFF;
+            border-color: #007BFF;
+            border-radius: 0.25rem;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #004080;
+        }
+
+        .form-label {
+            font-weight: bold;
+        }
+
+        .form-control {
+            border-radius: 0.25rem;
+        }
+
+        .invalid-feedback {
+            display: block;
+        }
+
+        .needs-validation .form-control:invalid {
+            border-color: #dc3545;
+            padding-right: calc(1.5em + .75rem);
+            background-image: none;
+        }
+
+        .needs-validation .form-control:valid {
+            border-color: #28a745;
+            padding-right: calc(1.5em + .75rem);
+            background-image: none;
+        }
+    </style>
 </head>
-<body style="background-color: skyblue;">
-    <div class="container my-5">
+<body>
+    <div class="container">
         <div class="row justify-content-center">
-            <div class="col-lg-6">
+            <div class="col-lg-8 col-md-10">
                 <div class="card bg-dark text-white">
                     <div class="card-body">
                         <h4 class="card-title text-center mb-4">Add New Trainer</h4>
@@ -94,5 +123,26 @@ if (isset($_POST['submit'])) {
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Example of client-side validation using JavaScript
+        (function () {
+            'use strict'
+
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.querySelectorAll('.needs-validation')
+
+            // Loop over them and prevent submission
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
 </body>
 </html>
