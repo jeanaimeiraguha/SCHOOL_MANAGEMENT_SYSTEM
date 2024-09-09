@@ -23,14 +23,14 @@
 
         ?>
         <tr>
-            <td><?php echo $row['Trainee_id']?></td>
-            <td><?php echo $row['Trainee_name']?></td>
-            <td><?php echo $row['Trainee_phone']?></td>
-            <td><?php echo $row['Trainee_salary']?></td>
+            <td><?php echo $row['Trainee ID']?></td>
+            <td><?php echo $row['Trainee Name']?></td>
+            <td><?php echo $row['Trainee Phone']?></td>
+            <td><?php echo $row['Trainee Salary']?></td>
             
             
-            <td><a href="delete.php?Trainee_id=<?php echo $row['Trainee_id']?>">Delete</a></td>
-            <td><a href="update.php?Trainee_id=<?php echo $row['Trainee_id']?>">Update</a></td>
+            <td><a href="delete.php?Trainee ID=<?php echo $row['Trainee ID']?>">Delete</a></td>
+            <td><a href="update.php?Trainee_id=<?php echo $row['Trainee ID']?>">Update</a></td>
         </tr>
         <?php
         }
