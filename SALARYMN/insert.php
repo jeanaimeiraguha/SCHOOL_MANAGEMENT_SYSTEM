@@ -45,28 +45,53 @@ if (isset($_POST['submit'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Trainee</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <?php
-    // Display success or error messages
-    if (!empty($success_message)) {
-        echo '<p style="color: green;">' . $success_message . '</p>';
-    }
-
-    if (!empty($errors)) {
-        echo '<ul style="color: red;">';
-        foreach ($errors as $error) {
-            echo '<li>' . $error . '</li>';
+    <div class="container mt-5">
+        <?php
+        // Display success or error messages
+        if (!empty($success_message)) {
+            echo '<div class="alert alert-success" role="alert">' . $success_message . '</div>';
         }
-        echo '</ul>';
-    }
-    ?>
 
-    <form action="" method="post">
-        Trainee Name: <input type="text" name="Trainee_name" value="<?php echo htmlspecialchars($Trainee_name); ?>"> <br>
-        Trainee Phone: <input type="text" name="Trainee_phone" value="<?php echo htmlspecialchars($Trainee_phone); ?>"> <br>
-        Trainee Salary: <input type="text" name="Trainee_salary" value="<?php echo htmlspecialchars($Trainee_Salary); ?>"> <br>
-        <button name="submit">Add New</button>
-    </form>
+        if (!empty($errors)) {
+            echo '<div class="alert alert-danger" role="alert">';
+            foreach ($errors as $error) {
+                echo '<p>' . $error . '</p>';
+            }
+            echo '</div>';
+        }
+        ?>
+
+        <div class="card">
+            <div class="card-header">
+                <h4>Add New Trainee</h4>
+            </div>
+            <div class="card-body">
+                <form action="" method="post">
+                    <div class="form-group">
+                        <label for="Trainee_name">Trainee Name</label>
+                        <input type="text" class="form-control" id="Trainee_name" name="Trainee_name" value="<?php echo htmlspecialchars($Trainee_name); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="Trainee_phone">Trainee Phone</label>
+                        <input type="text" class="form-control" id="Trainee_phone" name="Trainee_phone" value="<?php echo htmlspecialchars($Trainee_phone); ?>">
+                    </div>
+                    <div class="form-group">
+                        <label for="Trainee_salary">Trainee Salary</label>
+                        <input type="text" class="form-control" id="Trainee_salary" name="Trainee_salary" value="<?php echo htmlspecialchars($Trainee_Salary); ?>">
+                    </div>
+                    <button type="submit" name="submit" class="btn btn-primary">Add New</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
