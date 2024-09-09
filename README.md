@@ -90,6 +90,11 @@ Welcome to the School Management System (SMS). This system is designed to stream
                         +----------+---------------+
                                    |
          +-------------------------+--------------------------+
+         
+         
+         
+         
+         
          |                         |                          |
    +-----+-----+             +-----+-----+             +------+-+------+
    | User Mgmt |             | Trainee   |             | Trainer Mgmt |
@@ -98,7 +103,10 @@ Welcome to the School Management System (SMS). This system is designed to stream
          |                         |                          |
          |                         |                          |
          |                         |                          |
-         v                         v                          v
+         v
+         
+         
+         v                          v
  +-------+---------+       +-------+---------+       +--------+---------+
  | User Database   |       | Trainee Database|       | Trainer Database |
  +-----------------+       +-----------------+       +------------------+
