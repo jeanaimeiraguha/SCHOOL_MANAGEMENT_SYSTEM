@@ -39,3 +39,82 @@ Welcome to the School Management System (SMS). This system is designed to stream
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/jeanaimeiraguha/SCHOOL_MANAGEMENT_SYSTEM.git
+
+
+
+
+
+
+
+   
+### This DFD LEVEL 0
+
+
+                +----------------------+
+                |                      |
+                |      School           |
+                |   Management System   |
+                |                      |
+                +--------+-------------+
+                         |
+        +----------------+-------------------+
+        |                |                   |
+    +---+---+        +---+---+           +---+---+
+    |  Admin  |        | Trainees |           | Trainers |
+    +--------+        +--------+           +--------+
+
+## This is DFD LEVEL 1
+
+                        +--------------------------+
+                        |                          |
+                        |  School Management System|
+                        |                          |
+                        +----------+---------------+
+                                   |
+         +-------------------------+--------------------------+
+         |                         |                          |
+   +-----+-----+             +-----+-----+             +------+-+------+
+   | User Mgmt |             | Trainee   |             | Trainer Mgmt |
+   | Process   |             | Management|             | Process      |
+   +-----+-----+             +-----+-----+             +------+-+------+
+         |                         |                          |
+         |                         |                          |
+         |                         |                          |
+         v                         v                          v
+ +-------+---------+       +-------+---------+       +--------+---------+
+ | User Database   |       | Trainee Database|       | Trainer Database |
+ +-----------------+       +-----------------+       +------------------+
+                                    |
+                                    |
+                                    v
+                            +-------+--------+
+                            |   Module Mgmt  |
+                            |    Process     |
+                            +-------+--------+
+                                    |
+                                    v
+                            +-------+--------+
+                            |  Module Database|
+                            +-----------------+
+                                    |
+                                    v
+                            +-------+--------+
+                            | Assessment Mgmt|
+                            |    Process     |
+                            +-------+--------+
+                                    |
+                                    v
+                            +-------+--------+
+                            |Assessment Database|
+                            +------------------+
+                                    |
+                                    v
+                            +-------+--------+
+                            | Salary Mgmt    |
+                            |   Process      |
+                            +-----------------+
+                                    |
+                                    v
+                            +-------+--------+
+                            | Salary Database|
+                            +-----------------+
