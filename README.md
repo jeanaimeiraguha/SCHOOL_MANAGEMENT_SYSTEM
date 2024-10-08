@@ -1,5 +1,5 @@
 # School Management System
-
+**IRAGUHA  TECH**
 ## Introduction
 
 Welcome to the School Management System (SMS). This system is designed to streamline and manage various aspects of school operations, including student and trainer information, module management, assessments, and salary tracking. It provides a user-friendly interface and robust functionalities to support efficient administrative tasks and data management.
@@ -90,11 +90,11 @@ Welcome to the School Management System (SMS). This system is designed to stream
                         +----------+---------------+
                                    |
          +-------------------------+--------------------------+
+         |                                                    |
          
-         
-         
-         
-         
+         |                                                    |
+         |                                                    |
+                                                              |
          |                         |                          |
    +-----+-----+             +-----+-----+             +------+-+------+
    | User Mgmt |             | Trainee   |             | Trainer Mgmt |
@@ -113,8 +113,8 @@ Welcome to the School Management System (SMS). This system is designed to stream
                                     |
                                     |
                                     v
-
-
+                                    |
+                               
                                     
                             +-------+--------+
                             |   Module Mgmt  |

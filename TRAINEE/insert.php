@@ -7,7 +7,7 @@ if (isset($_POST['submit'])) {
     $Trainee_name = $_POST['Trainee_name'];
     $Trainee_address = $_POST['Trainee_address'];
 
-    $insert = mysqli_query($conn, "INSERT INTO Trainee (Trainee_id, Trainer_id, Trainee_name, Trainee_address) VALUES('$Trainee_id', '$Trainer_id', '$Trainee_name', '$Trainee_address')");
+    $insert = mysqli_query($conn, "INSERT INTO Trainee VALUES('$Trainee_id', '$Trainer_id', '$Trainee_name', '$Trainee_address')");
 
     if ($insert) {
         header('location:select.php');

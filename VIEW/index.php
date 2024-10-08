@@ -8,7 +8,7 @@
     <title>Dashboard</title>
     <style>
         body {
-            padding-top: 56px; /* Adjust padding to prevent content from hiding under fixed navbar */
+            padding-top: 16px; 
         }
 
         .navbar {
@@ -60,8 +60,8 @@
         }
     </style>
 </head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top">
+<body class="">
+    <nav class="navbar navbar-expand-sm navbar-dark bg-success fixed-top d-flex">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -86,14 +86,14 @@
                     <a class="nav-link" href="../SALARYMN/select.php">Salary</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Logout</a>
+                    <a class="nav-link mx-5" href="../VIEW/logout.php">Logout</a>
                 </li>
             </ul>
         </div>
     </nav>
     <div class="container">
         <div class="jumbotron">
-            <h1 class="display-4">Welcome to IRAGUHA'S SCHOOL MANAGEMENT SYSTEM</h1>
+            <h1 class="display-2">Welcome to IRAGUHA'S SCHOOL MANAGEMENT SYSTEM</h1>
             <hr class="my-4 mb-3">
             <p>Click the button below to read more about the system.</p>
             <a class="btn btn-success btn-lg" href="#" role="button">Read More</a>
