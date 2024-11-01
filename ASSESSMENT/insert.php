@@ -9,12 +9,15 @@ if (isset($_POST['submit'])) {
     $assessment_name = $_POST['assessment_name'];
 
     // Insert data into the database
-    $insert = mysqli_query($conn, "INSERT INTO assessment (Trainer_id, module_id, Trade_id, Asessment_date, assessment_name) VALUES ('$Trainer_id', '$module_id', '$Trade_id', '$Asessment_date', '$assessment_name')");
+    $insert = mysqli_query($conn, "INSERT INTO assessment(Trainer_id, module_id, Trade_id, Asessment_date, assessment_name) VALUES ('$Trainer_id', '$module_id', '$Trade_id', '$Asessment_date', '$assessment_name')");
 
     if ($insert) {
         header('location:select.php');
     }
-    exit;
+    else{
+        echo "<script>alert('failed')<script/>";
+
+    };
 }
 ?>
 
