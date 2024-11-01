@@ -15,7 +15,7 @@ if (isset($_POST['submit'])) {
         header('location:select.php');
     }
     else{
-        echo "<script>alert('failed')</script>";
+        echo "<script>alert('failed')<script/>";
 
     };
 }
